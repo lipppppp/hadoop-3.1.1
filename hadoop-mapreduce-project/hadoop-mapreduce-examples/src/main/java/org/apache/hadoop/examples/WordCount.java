@@ -81,6 +81,7 @@ public class WordCount {
     job.setOutputValueClass(IntWritable.class);
     for (int i = 0; i < otherArgs.length - 1; ++i) {
       FileInputFormat.addInputPath(job, new Path(otherArgs[i]));
+
     }
     FileOutputFormat.setOutputPath(job,
       new Path(otherArgs[otherArgs.length - 1]));
